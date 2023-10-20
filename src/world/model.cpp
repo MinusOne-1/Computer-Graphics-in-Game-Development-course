@@ -19,6 +19,7 @@ void cg::world::model::load_obj(const std::filesystem::path& model_path)
 {
 	tinyobj::ObjReaderConfig reader_config;
 	reader_config.mtl_search_path = model_path.parent_path().string();
+	std::cout << model_path.parent_path().string();
 	reader_config.triangulate = true;
 
 	tinyobj::ObjReader reader;
